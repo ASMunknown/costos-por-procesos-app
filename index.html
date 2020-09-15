@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costeo por procesos</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    
+            
+</head>
+<body>
+
+    <body>
+        <div class="container">
+            <h1 style="text-align: center;">Backus</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa placeat voluptas recusandae, quidem dolorum aut neque officia itaque eveniet? Voluptates ex ullam alias earum quia deleniti cupiditate repellendus explicabo cumque?
+            </p>
+
+            <hr>
+            <hr>
+            <br>
+
+            <h5 style="text-align:center;"> Registro de uso de materia prima </h5>
+
+            <input type="text" id="fecha">Fecha</input>
+            <input type="text" id="tipo_Proceso">Tipo de proceso </input>
+            <input type="text" id="costoMP">Costo </input>
+            <input type="text" id="Concepto">Concepto</input>
+            <input type="date" name="fecha_op" id="fecha_op">Fecha actual</input>
+            <!--First Name: <input type="text" id="myText">-->
+            <br>
+            <br>
+            <button onclick="insertMaterialDirecto()">Registrar Datos</button>
+            
+
+            <br>
+            <hr>
+            <hr>
+            <br>
+
+            <h5 style="text-align:center;"> Informe del movimiento de Unidades </h5>
+
+            <p>
+                Período contable terminado en julio 31 de 2020
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Unidades a contabilizar</th>
+                        <th>MOLIENDA</th>
+                        <th>MACERACIÓN</th>
+                        <th>RECIRCULACIÓN</th>
+                        <th>COCCIÓN</th>
+                        <th>LUPULIZACIÓN</th>
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>En proceso al inicio</td>
+                        <td> <input id="epai_molienda" type="text" class="validate"> </td>
+                        <td> <input id="epai_maceración" type="text" class="validate"> </td>
+                        <td> <input id="epai_recirculacion" type="text" class="validate"> </td>
+                        <td> <input id="epai_coccion" type="text" class="validate"> </td>
+                        <td> <input id="epai_lupulizacion" type="text" class="validate"> </td>
+                    </tr>
+                    <tr>
+                        <td>Unidades iniciadas</td>
+                        <td> <input id="ui_molienda" type="text" class="validate"> </td>
+                        <td> <input id="ui_maceración" disabled type="text" class="validate"> </td>
+                        <td> <input id="ui_recirculacion" disabled type="text" class="validate"> </td>
+                        <td> <input id="ui_coccion" disabled type="text" class="validate"> </td>
+                        <td> <input id="ui_lupulizacion" disabled type="text" class="validate"> </td>
+                    </tr>
+                    <tr>
+                        <td>Añadidas</td>
+                        <td> <input id="a_molienda" type="text" class="validate"> </td>
+                        <td> <input id="a_maceración" type="text" class="validate"> </td>
+                        <td> <input id="a_recirculacion" type="text" class="validate"> </td>
+                        <td> <input id="a_coccion" type="text" class="validate"> </td>
+                        <td> <input id="a_lupulizacion" type="text" class="validate"> </td>
+                    </tr>
+                    <tr>
+                        <th>Unidades contabilizadas</th>
+                        <th>MOLIENDA</th>
+                        <th>MACERACIÓN</th>
+                        <th>RECIRCULACIÓN</th>
+                        <th>COCCIÓN</th>
+                        <th>LUPULIZACIÓN</th>
+                    </tr>
+                    <tr>
+                        <td>Terminadas y transferidas</td>
+                        <td> <input id="t_molienda"  type="text" class="validate"> </td>
+                        <td> <input id="t_maceración"  type="text" class="validate"> </td>
+                        <td> <input id="t_recirculacion"  type="text" class="validate"> </td>
+                        <td> <input id="t_coccion"  type="text" class="validate"> </td>
+                        <td> <input id="t_lupulizacion"  type="text" class="validate"> </td>
+                    </tr>
+                    <tr>
+                        <td>Terminadas sin transferir</td>
+                        <td> <input id="t_molienda"  type="text" class="validate"> </td>
+                        <td> <input id="t_maceración"  type="text" class="validate"> </td>
+                        <td> <input id="t_recirculacion"  type="text" class="validate"> </td>
+                        <td> <input id="t_coccion"  type="text" class="validate"> </td>
+                        <td> <input id="t_lupulizacion"  type="text" class="validate"> </td>
+                    </tr>
+                    <tr>
+                        <td>En proceso al final</td>
+                        <td> <input id="t_molienda"  type="text" class="validate"> </td>
+                        <td> <input id="t_maceración"  type="text" class="validate"> </td>
+                        <td> <input id="t_recirculacion"  type="text" class="validate"> </td>
+                        <td> <input id="t_coccion"  type="text" class="validate"> </td>
+                        <td> <input id="t_lupulizacion"  type="text" class="validate"> </td>
+                    </tr>
+                    <tr>
+                        <td>Pérdidas</td>
+                        <td> <input id="t_molienda" type="text" class="validate"> </td>
+                        <td> <input id="t_maceración" type="text" class="validate"> </td>
+                        <td> <input id="t_recirculacion" type="text" class="validate"> </td>
+                        <td> <input id="t_coccion" type="text" class="validate"> </td>
+                        <td> <input id="t_lupulizacion" type="text" class="validate"> </td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td> <input id="t_molienda" disabled type="text" class="validate"> </td>
+                        <td> <input id="t_maceración" disabled type="text" class="validate"> </td>
+                        <td> <input id="t_recirculacion" disabled type="text" class="validate"> </td>
+                        <td> <input id="t_coccion" disabled type="text" class="validate"> </td>
+                        <td> <input id="t_lupulizacion" disabled type="text" class="validate"> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+<!--
+            <table>
+                <thead>
+                    <tr>
+                        <th>Unidades a contabilizar</th>
+                        <th>ENFRIAMIENTO</th>
+                        <th>INOCULACIÓN</th>
+                        <th>FERMENTACIÓN</th>
+                        <th>CARBONATACIÓN</th>
+                        <th>EMBAZADO Y EMBOTELLADO</th>
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                    </tr>
+                    <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                    </tr>
+                    <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                    </tr>
+                </tbody>
+            </table>
+-->
+
+
+        </div>
+
+
+
+    
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+        <script src="vendor/axios-0.17.1/axios.js"></script>
+        <script src="main.js"></script>
+    </body>
+            
+
+
+</body>
+</html>
